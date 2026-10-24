@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-bg: #eef3f1;
+  --color-ink: #14323a;
+  --color-muted: #5d7278;
+  --color-line: #d5e1dd;
+  --color-mist: #e5eeea;
+  --color-primary: #0f766e;
+  --color-primary-dark: #0b5b55;
+  --color-primary-soft: rgba(15, 118, 110, 0.18);
+  --color-accent: #c9783f;
+  --color-danger: #c2410c;
+  --background: var(--color-bg);
+  --foreground: var(--color-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+html {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-ink);
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 34%),
+    radial-gradient(circle at top right, rgba(201, 120, 63, 0.12), transparent 28%),
+    linear-gradient(180deg, #f7faf8 0%, var(--color-bg) 48%, #e8efec 100%);
+  font-family: inherit;
+}
+
+.font-sans {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  color: var(--color-ink);
+  background-color: #fff;
+  color-scheme: light;
+}
+
+select option,
+select optgroup {
+  color: var(--color-ink);
+  background-color: #fff;
+}
+
+button:not(:disabled),
+[role='button']:not([aria-disabled='true']),
+a,
+label[for],
+select,
+summary {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
